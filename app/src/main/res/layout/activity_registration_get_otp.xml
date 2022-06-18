@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registration_get_otp"
+    android:background="@drawable/bg2">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A7000000"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="-148dp"
+        tools:layout_editor_absoluteY="-58dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/aldrich"
+                android:text="Forgot Password"
+                android:textColor="@color/White"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showFlag="true"
+                app:ccp_showFullName="true"
+                app:ccp_textSize="18sp"
+                android:gravity="center"
+
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:ccp_contentColor="@color/White"
+                app:ccpDialog_backgroundColor="#000000"
+                app:ccpDialog_textColor="@color/White"
+                app:layout_constraintBottom_toTopOf="@+id/ed_mobile_no"
+                app:layout_constraintEnd_toEndOf="@+id/ed_mobile_no"
+                app:layout_constraintStart_toStartOf="@+id/ed_mobile_no"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.723" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_mobile_no"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="224dp"
+                android:layout_marginRight="25dp"
+                android:textColorHint="@color/White"
+                app:boxStrokeColor="@color/White"
+                app:boxStrokeWidth="3dp"
+
+                app:boxStrokeWidthFocused="3dp"
+                app:hintTextColor="@color/White"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.86"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:startIconTint="@color/White"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/White">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_mobile_no_plaintext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone No"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="13dp"
+                    android:paddingRight="20sp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/White"
+                    android:textColorHint="@color/White"
+                    android:textSize="18sp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/White"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/bt_get_otp"
+                android:layout_width="361dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="92dp"
+                android:background="@drawable/input_bg"
+                android:text="GET  OTP"
+                android:textColor="@color/White"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_mobile_no"
+                app:layout_constraintStart_toStartOf="@+id/ed_mobile_no"
+                app:layout_constraintTop_toBottomOf="@+id/ed_mobile_no" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/bt_Register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="65dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/bt_Register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ed_mobile_no" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
